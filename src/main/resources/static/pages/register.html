@@ -111,7 +111,6 @@
         el:"#app",
         data:{
             adminUser:{},
-            checkCode:""
         },
         methods:{
             reset(){//重置
@@ -124,7 +123,7 @@
                 }));
             },
             register(){//点击登录按钮后发送ajax请求给后端进行账号密码比对
-                if(this.adminUser.username == null || this.adminUser.password == null || this.checkCode === "") {
+                if(this.adminUser.username == null || this.adminUser.password == null || this.adminUser.code === "") {
                     this.$message.error("用户名, 密码或验证码不能为空");
                 }
                 else {
